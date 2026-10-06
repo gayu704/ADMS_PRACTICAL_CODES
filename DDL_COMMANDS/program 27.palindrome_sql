@@ -1,0 +1,23 @@
+SET SERVEROUTPUT ON;
+
+DECLARE
+    N NUMBER := 121;
+    TEMP NUMBER;
+    REV NUMBER := 0;
+    DIGIT NUMBER;
+BEGIN
+    TEMP := N;
+
+    WHILE TEMP > 0 LOOP
+        DIGIT := MOD(TEMP,10);
+        REV := (REV * 10) + DIGIT;
+        TEMP := TRUNC(TEMP/10);
+    END LOOP;
+
+    IF REV = N THEN
+        DBMS_OUTPUT.PUT_LINE(N || ' IS A PALINDROME');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE(N || ' IS NOT A PALINDROME');
+    END IF;
+END;
+/
