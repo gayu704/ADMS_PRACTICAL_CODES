@@ -1,0 +1,7 @@
+DECLARE
+    S VARCHAR2(50) := 'GAYATHRI';
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Reverse = ' ||
+                         REVERSE(S));
+END;
+/
