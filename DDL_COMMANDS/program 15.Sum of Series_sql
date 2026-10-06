@@ -1,0 +1,11 @@
+DECLARE
+    N NUMBER := 10;
+    S NUMBER := 0;
+BEGIN
+    FOR I IN 1..N LOOP
+        S := S + I;
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE('Sum = ' || S);
+END;
+/
