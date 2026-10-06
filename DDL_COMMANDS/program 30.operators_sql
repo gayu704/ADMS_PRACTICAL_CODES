@@ -1,0 +1,17 @@
+SET SERVEROUTPUT ON;
+
+DECLARE
+    A NUMBER := 10;
+    B NUMBER := 5;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Addition = ' || (A+B));
+    DBMS_OUTPUT.PUT_LINE('Subtraction = ' || (A-B));
+    DBMS_OUTPUT.PUT_LINE('Multiplication = ' || (A*B));
+    DBMS_OUTPUT.PUT_LINE('Division = ' || (A/B));
+    DBMS_OUTPUT.PUT_LINE('Modulus = ' || MOD(A,B));
+
+    IF A > B THEN
+        DBMS_OUTPUT.PUT_LINE('A is greater than B');
+    END IF;
+END;
+/
