@@ -1,0 +1,19 @@
+SET SERVEROUTPUT ON;
+
+DECLARE
+    N NUMBER := 7;
+    COUNT_NUM NUMBER := 0;
+BEGIN
+    FOR I IN 1..N LOOP
+        IF MOD(N,I) = 0 THEN
+            COUNT_NUM := COUNT_NUM + 1;
+        END IF;
+    END LOOP;
+
+    IF COUNT_NUM = 2 THEN
+        DBMS_OUTPUT.PUT_LINE(N || ' IS A PRIME NUMBER');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE(N || ' IS NOT A PRIME NUMBER');
+    END IF;
+END;
+/
